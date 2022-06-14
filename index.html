@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+  <link rel="icon" type="image/x-icon" href="Images/favicon.png">
   <title>Tra cứu lịch tiêm ngừa dự kiến</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -30,7 +31,6 @@
           <a class="navbar-brand" href="index.html">
             <img src="./images/logo.png" alt="logo">
           </a>
-
           <div class="navbar-collapse" id="">
             <div class="custom_menu-btn">
               <button onclick="openNav()">
@@ -47,7 +47,8 @@
             </div>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
-                <a href="https://phuongchau.com">HOME</a>
+                <a href="#" onclick="openNav()">TRANG CHỦ</a>
+                <a href="#detail" onclick="openNav()">LỊCH TIÊM NGỪA</a>
               </div>
             </div>
           </div>
@@ -75,7 +76,7 @@
                   </p>
                   <div>
                     <input type="date" id="birthday" />
-                    <a href="">
+                    <a href="" onclick="userAction()">
                       Xem lịch
                     </a>
                   </div>
@@ -92,13 +93,12 @@
       </div>
 
     </section>
-
     <!-- end slider section -->
   </div>
 
   <!-- about section -->
 
-  <section class="about_section layout_padding">
+  <section id="detail" class="about_section layout_padding">
     <div class="container">
       <h2>
         HÃY TIÊM NGỪA VÌ SỨC KHỎE CỦA THẾ HỆ TƯƠNG LAI!
@@ -110,7 +110,7 @@
       </p>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="about_card-container">
         <div class="about_card">
           <div class="about-detail">
@@ -127,11 +127,6 @@
               </p>
             </div>
           </div>
-          <div>
-            <a href="" class="about_btn">
-              Read More
-            </a>
-          </div>
         </div>
       </div>
     </div>
@@ -145,12 +140,34 @@
     $(document).ready(function () {
       $('#birthday').val(moment().format("DD/MM/YYYY"));
     });
+
+    const userAction = async () => {
+      alert('Toi day roi nha');
+      const person = new Object();
+      person.FullName = "Test person";
+      person.Birthday = "23/04/2022";
+      alert(person);
+      const response = await fetch('http://113.161.210.94:9001/pcportal/api/3rd/vaccination', {
+        method: 'POST',
+        body: "person",
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      alert('Toi day roi nha');
+      const myJson = await response.json();
+      alert(myJson);
+    };
   </script>
   <script>
     function openNav() {
       document.getElementById("myNav").classList.toggle("menu_width")
       document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
     }
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 500,
+      speedAsDuration: true
+    });
   </script>
 
 </body>
