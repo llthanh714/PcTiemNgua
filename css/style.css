@@ -264,8 +264,7 @@ a:focus {
 }
 
 .slider_detail input {
-  font-weight: bold;
-  padding: 6px 25px;
+  padding: 7px 25px;
   border: 2px solid #fefeff;
   border-radius: 35px;
   background-color: #ba71a8;
@@ -273,6 +272,11 @@ a:focus {
 }
 
 .slider_detail a:hover {
+  background-color: #fefeff;
+  color: #010106;
+}
+
+.slider_detail input:hover {
   background-color: #fefeff;
   color: #010106;
 }
