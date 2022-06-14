@@ -272,7 +272,7 @@ a:focus {
 }
 
 .slider_img-box img {
-  width: 100%;
+  width: 90%;
   position: relative;
   z-index: 2;
 }
@@ -286,7 +286,7 @@ a:focus {
   width: 90%;
   height: 30%;
   background-color: #fff;
-  filter: blur(75px) opacity(.7);
+  filter: blur(45px) opacity(.7);
 }
 
 /* end slider section */
