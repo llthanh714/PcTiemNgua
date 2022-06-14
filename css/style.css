@@ -195,7 +195,9 @@ a:focus {
 }
 
 .navbar-brand img {
-  width: 40px;
+  position: absolute;
+  margin-top: 90px;
+  width: 90px;
   margin-right: 5px;
 }
 
@@ -206,7 +208,6 @@ a:focus {
   font-weight: 500;
   color: #fefeff;
   margin-top: 5px;
-
 }
 
 .custom_nav-container {
@@ -266,13 +267,20 @@ a:focus {
   border-radius: 35px;
 }
 
+.slider_detail input {
+  display: inline-block;
+  padding: 9px 35px;
+  border: 2px solid #fefeff;
+  border-radius: 35px;
+}
+
 .slider_detail a:hover {
   background-color: #fefeff;
   color: #010106;
 }
 
 .slider_img-box img {
-  width: 90%;
+  width: 100%;
   position: relative;
   z-index: 2;
 }
