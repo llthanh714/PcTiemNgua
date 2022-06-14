@@ -1,5 +1,5 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #1b161d;
   background-color: #ffffff;
 }
@@ -251,10 +251,6 @@ a:focus {
   text-transform: uppercase;
 }
 
-.slider_detail h1 span {
-  color: #010106;
-}
-
 .slider_detail p {
   margin: 25px 0 35px 0;
 }
@@ -268,10 +264,12 @@ a:focus {
 }
 
 .slider_detail input {
-  display: inline-block;
-  padding: 9px 35px;
+  font-weight: bold;
+  padding: 6px 25px;
   border: 2px solid #fefeff;
   border-radius: 35px;
+  background-color: #ba71a8;
+  color: #fefeff;
 }
 
 .slider_detail a:hover {

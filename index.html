@@ -5,10 +5,13 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Tiêm ngừa</title>
+  <title>Tra cứu lịch tiêm ngừa dự kiến</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
@@ -59,9 +62,7 @@
                 <div class="slider_detail">
                   <h1>
                     TRA CỨU </br>
-                    <span>
-                      TIÊM NGỪA
-                    </span>
+                    LỊCH TIÊM NGỪA
                   </h1>
                   <p>
                     Kính mời quý khách hàng nhập đầy đủ thông tin ngày, tháng, năm sinh của bé để tra cứu lịch tiêm ngừa
@@ -176,7 +177,11 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#birthday').val(moment().format("DD/MM/YYYY"));
+    });
+  </script>
   <script>
     function openNav() {
       document.getElementById("myNav").classList.toggle("menu_width")
