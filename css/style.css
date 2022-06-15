@@ -252,15 +252,20 @@ a:focus {
   margin: 25px 0 35px 0;
 }
 
-.slider_detail a {
+.slider_detail button {
+  outline: none;
+  font-weight: bold;
   display: inline-block;
   padding: 9px 35px;
   border: 2px solid #fefeff;
   color: #fefeff;
+  background-color: #ba71a8;
   border-radius: 35px;
 }
 
 .slider_detail input {
+  outline: none;
+  font-weight: bold;
   padding: 7px 25px;
   border: 2px solid #fefeff;
   border-radius: 35px;
@@ -268,7 +273,7 @@ a:focus {
   color: #fefeff;
 }
 
-.slider_detail a:hover {
+.slider_detail button:hover {
   background-color: #fefeff;
   color: #010106;
 }
