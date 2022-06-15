@@ -12,8 +12,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
@@ -134,33 +132,25 @@
 
   <!-- end about section -->
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+
   <script type="text/javascript">
-    $(document).ready(function () {
-      $('#birthday').val(moment().format("DD/MM/YYYY"));
-    });
 
     function postData() {
-      alert('Toi day roi nha 1');
-      const data = { FullName: 'example', Birthday: '23/04/2022' };
-      fetch('http://113.161.210.94:9001/pcportal/api/3rd/vaccination/', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
+      alert('Vao toi ham get data')
+      $.ajax({
+        url: 'https://113.161.210.94:9001/pcportal/api/3rd/vaccination?birthday=23/04/1991',
+        type: 'GET',
+        success: function (result) {
+          alert(result);
         },
-        body: JSON.stringify(data),
-      })
-        .then(response => alert(response.json()))
-        .then(data => {
-          console.log('Success:', data);
-        })
-        .catch((error) => {
-          alert(error);
-        });
-      alert('Toi day roi nha 2');
-    }
+        error: function (err) {
+          console.log(err);
+        }
+      });
+    };
+
   </script>
 
   <script>
