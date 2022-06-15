@@ -76,7 +76,7 @@
                   </p>
                   <div>
                     <input type="date" id="birthday" />
-                    <a href="" onclick="userAction()">
+                    <a href="" onclick="postData()">
                       Xem lịch
                     </a>
                   </div>
@@ -134,31 +134,35 @@
 
   <!-- end about section -->
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       $('#birthday').val(moment().format("DD/MM/YYYY"));
     });
 
-    const userAction = async () => {
-      alert('Toi day roi nha');
-      const person = new Object();
-      person.FullName = "Test person";
-      person.Birthday = "23/04/2022";
-      alert(person);
-      const response = await fetch('http://113.161.210.94:9001/pcportal/api/3rd/vaccination', {
+    function postData() {
+      alert('Toi day roi nha 1');
+      const data = { FullName: 'example', Birthday: '23/04/2022' };
+      fetch('http://113.161.210.94:9001/pcportal/api/3rd/vaccination/', {
         method: 'POST',
-        body: "person",
+        mode: 'no-cors',
         headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      alert('Toi day roi nha');
-      const myJson = await response.json();
-      alert(myJson);
-    };
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then(response => alert(response.json()))
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch((error) => {
+          alert(error);
+        });
+      alert('Toi day roi nha 2');
+    }
   </script>
+
   <script>
     function openNav() {
       document.getElementById("myNav").classList.toggle("menu_width")
