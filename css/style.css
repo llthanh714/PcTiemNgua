@@ -318,47 +318,35 @@ a:focus {
 }
 
 .about_card {
-  margin: 45px 20px;
+  margin: 20px;
   width: 100%;
   min-width: 300px;
-  height: 540px;
 }
 
 .about_card .about-detail {
-  padding: 2px 25px 35px 25px;
-  height: 420px;
+  padding: 20px;
+  height: auto;
+  width: auto;
   -webkit-box-shadow: -1px 0px 25px 9px rgba(0, 0, 0, 0.09);
   -moz-box-shadow: -1px 0px 25px 9px rgba(0, 0, 0, 0.09);
   box-shadow: -1px 0px 25px 9px rgba(0, 0, 0, 0.09);
 }
 
-.about_card .about_img-box {
-  width: 110px;
-  height: 104px;
-  margin: 50px auto;
+.about_card .about-detail table {
+  margin: 0px;
+}
 
+.about_card .about-detail thead {
+  color: #fefeff;
+  background-color: #ba71a8;
 }
 
 .about_card .about-detail p {
-  margin-top: 15px;
+  text-align: left;
 }
 
-.about_card img {
-  width: 100%;
-}
-
-.about_card a {
-  display: inline-block;
-  padding: 8px 25px;
-  border: 2px solid #c4d70f;
-  color: #c4d70f;
-  border-radius: 35px;
-  margin-top: 55px;
-}
-
-.about_card a:hover {
-  background-color: #c4d70f;
-  color: #fefeff;
+.about_card .about-detail a {
+  color: #ba71a8;
 }
 
 /* end about section */
