@@ -198,8 +198,8 @@ a:focus {
 
 .navbar-brand img {
   position: absolute;
-  margin-top: 90px;
-  width: 90px;
+  margin-top: 70px;
+  width: 70px;
   margin-right: 5px;
 }
 
@@ -319,13 +319,13 @@ a:focus {
 }
 
 .about_card {
-  margin: 20px;
+  margin: 5px;
   width: 100%;
   min-width: 300px;
 }
 
 .about_card .about-detail {
-  padding: 20px;
+  padding: 0px;
   height: auto;
   width: auto;
   -webkit-box-shadow: -1px 0px 25px 9px rgba(0, 0, 0, 0.09);
