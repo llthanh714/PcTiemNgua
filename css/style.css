@@ -270,9 +270,9 @@ a:focus {
 .slider_detail input {
   outline: none;
   justify-content: center;
-  width: 145px;
+  width: 155px;
   font-weight: bold;
-  padding: 8px 25px;
+  padding: 9px 25px;
   border: 2px solid #fefeff;
   border-radius: 35px;
   background-color: #ba71a8;

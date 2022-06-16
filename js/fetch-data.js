@@ -26,3 +26,12 @@ function addDetail(item, index, array) {
     const table = document.getElementById("table-detail");
     table.innerHTML += html;
 };
+
+function showDetail(item){
+    var obj = Object.values(item);
+    const title = document.getElementById("modalTitle");
+    title.innerHTML = obj[0];
+    const body = document.getElementById("modalBody");
+    body.innerHTML = obj[1];
+    $("#modal").modal()
+}
