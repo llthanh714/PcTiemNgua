@@ -41,6 +41,11 @@
     .info_content {
         margin-top: 150px;
     }
+
+    .slider_img-box::after {
+        position: absolute;
+        top: 40%;
+    }
 }
 
 @media (min-width: 1200px) {

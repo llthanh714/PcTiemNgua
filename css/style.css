@@ -304,6 +304,17 @@ a:focus {
 
 /* end slider section */
 
+/* modal section */
+
+.modal-title{
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  color: #ba71a8;
+}
+
+/* end modal section */
+
 /* about section */
 .about_section {
   text-align: center;
