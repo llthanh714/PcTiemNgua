@@ -33,6 +33,10 @@ body {
   padding-bottom: 75px;
 }
 
+::placeholder {
+  color: #fefeff;
+}
+
 /*header section*/
 
 .hero_area {
@@ -265,8 +269,10 @@ a:focus {
 
 .slider_detail input {
   outline: none;
+  justify-content: center;
+  width: 145px;
   font-weight: bold;
-  padding: 7px 25px;
+  padding: 8px 25px;
   border: 2px solid #fefeff;
   border-radius: 35px;
   background-color: #ba71a8;
@@ -274,11 +280,6 @@ a:focus {
 }
 
 .slider_detail button:hover {
-  background-color: #fefeff;
-  color: #010106;
-}
-
-.slider_detail input:hover {
   background-color: #fefeff;
   color: #010106;
 }

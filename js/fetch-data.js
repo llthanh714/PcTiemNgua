@@ -1,8 +1,9 @@
-var uri = 'http://localhost:9839/api/3rd/vaccination/23041991';
+var uri = 'http://localhost:9839/api/3rd/vaccination/';
 
 function getItems() {
     document.getElementById('table-detail').innerHTML = "";
-    fetch(uri, { mode: "cors" })
+    var date = document.getElementById('birthday').value.replace('/','').replace('/','');
+    fetch(uri + date, { mode: "cors" })
         .then(
             function (response) {
                 if (response.status !== 200) {
