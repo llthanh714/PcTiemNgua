@@ -45,7 +45,8 @@
 
 <body>
   <!-- Modal -->
-  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog"
+    aria-labelledby="modalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -53,6 +54,9 @@
           </h5>
         </div>
         <div class="modal-body" id="modalBody">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -138,6 +142,7 @@
       <h2>
         HÃY TIÊM NGỪA VÌ SỨC KHỎE CỦA THẾ HỆ TƯƠNG LAI!
       </h2>
+      <a onclick="showDetail('6trong1')">Show Modal</a>
       <p>
         Vì Bé nhà bạn có thể bị ốm hoặc vì một lý do nào đó khiến bé bị lỡ mũi tiêm nên không thể tiêm chủng cho bé đúng
         với thời gian trong lịch tiêm chủng này, hoặc bạn không muốn một lúc tiêm quá nhiều loại vắc-xin vui lòng liên
