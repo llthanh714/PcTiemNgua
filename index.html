@@ -45,8 +45,7 @@
 
 <body>
   <!-- Modal -->
-  <div class="modal fade" id="modal" tabindex="-1" role="dialog"
-    aria-labelledby="modalCenterTitle" aria-hidden="true">
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -62,130 +61,13 @@
     </div>
   </div>
 
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
-            <img src="./images/logo.png" alt="logo">
-          </a>
-          <div class="navbar-collapse" id="">
-            <div class="custom_menu-btn">
-              <button onclick="openNav()">
-                <span class="s-1">
-
-                </span>
-                <span class="s-2">
-
-                </span>
-                <span class="s-3">
-
-                </span>
-              </button>
-            </div>
-            <div id="myNav" class="overlay">
-              <div class="overlay-content">
-                <a href="#" onclick="openNav()">TRANG CHỦ</a>
-                <a href="#detail" onclick="openNav()">LỊCH TIÊM NGỪA</a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-
-    <!-- slider section -->
-    <section class="slider_section position-relative">
-
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-md-4 offset-md-1">
-                <div class="slider_detail">
-                  <h1>
-                    TRA CỨU <br>
-                    LỊCH TIÊM NGỪA
-                  </h1>
-                  <p>
-                    Kính mời quý khách hàng nhập đầy đủ thông tin ngày, tháng, năm sinh của bé để tra cứu lịch tiêm ngừa
-                    và ấn vào tên vắc-xin để tra cứu thông tin cụ thể của từng loại vắc-xin
-                  </p>
-                  <div>
-                    <input type="text" id="birthday" placeholder="dd/mm/yyyy" />
-                    <a href="#detail">
-                      <button onclick="getItems()">Xem lịch</button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-7">
-                <div class="slider_img-box">
-                  <img src="images/slider-img-2.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <!-- end slider section -->
+  <div id="lang">
   </div>
 
-  <!-- about section -->
-
-  <section id="detail" class="about_section layout_padding">
-    <div class="container">
-      <h2>
-        HÃY TIÊM NGỪA VÌ SỨC KHỎE CỦA THẾ HỆ TƯƠNG LAI!
-      </h2>
-      <p>
-        Vì Bé nhà bạn có thể bị ốm hoặc vì một lý do nào đó khiến bé bị lỡ mũi tiêm nên không thể tiêm chủng cho bé đúng
-        với thời gian trong lịch tiêm chủng này, hoặc bạn không muốn một lúc tiêm quá nhiều loại vắc-xin vui lòng liên
-        hệ tổng đài Bệnh viện Quốc tế Phương Châu 1900 54 54 66 để được thông tin thêm
-      </p>
-    </div>
-
-    <div class="container-fluid">
-      <div class="about_card-container">
-        <div class="about_card">
-          <div class="about-detail">
-            <div class="card_detail-ox">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">Tuổi của Bé</th>
-                    <th scope="col">Vắc-xin</th>
-                    <th scope="col">Ngày dự tiêm</th>
-                  </tr>
-                </thead>
-                <tbody id="table-detail">
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
-
-  <script src="js/fetch-data.js"></script>
   <script type="text/javascript">
 
     $(document).ready(function () {
-      $('#birthday').datepicker({
-        format: 'dd/mm/yyyy',
-        sideBySide: false
-      });
-
-      // $("#myBtn").click(function () {
-      //   $("#modal").modal();
-      // });
+      $("#lang").load("/lang/vi.html");
     });
 
     function openNav() {

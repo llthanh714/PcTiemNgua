@@ -1,0 +1,132 @@
+<div class="hero_area">
+  <!-- header section strats -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/logo.png" alt="logo">
+        </a>
+        <div class="navbar-collapse" id="">
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1">
+
+              </span>
+              <span class="s-2">
+
+              </span>
+              <span class="s-3">
+
+              </span>
+            </button>
+          </div>
+          <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <a href="#" onclick="openNav()">HOME</a>
+              <a href="#detail" onclick="openNav()">VACCINATION INFO</a>
+              <a href="#" onclick="changeToVi()">TIẾNG VIỆT</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+
+  <!-- slider section -->
+  <section class="slider_section position-relative">
+
+    <div class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4 offset-md-1">
+              <div class="slider_detail">
+                <h1>
+                  VACCINATION <br> INFO
+                </h1>
+                <p>
+                  Please enter your baby's date, month, and year of birth. After entering, the scheduled vaccination
+                  schedule will appear. <br>
+                  In the scheduled vaccination schedule, click on the vaccine name to look up specific
+                  information of each vaccine. <br>
+                  Phuong Chau thank you!
+                </p>
+                <div>
+                  <input type="text" id="birthday" placeholder="dd/mm/yyyy" />
+                  <a href="#detail">
+                    <button onclick="getItems()">Check</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="slider_img-box">
+                <img src="images/slider-img-2.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- end slider section -->
+</div>
+
+<!-- about section -->
+
+<section id="detail" class="about_section layout_padding">
+  <div class="container">
+    <h2>
+      GET VACCINATED FOR THE HEALTH OF FUTURE GENERATIONS!
+    </h2>
+    <p>
+      Your baby may be sick or for some other reason, he or she may miss a dose, so it is not possible to
+      vaccinate your baby at the right time in this vaccination schedule, or you do not want to have too many
+      vaccinations at once. vaccines, please contact Phuong Chau International Hospital's witchboard 1900 54 54 66 for
+      more information.
+    </p>
+  </div>
+
+  <div class="container-fluid">
+    <div class="about_card-container">
+      <div class="about_card">
+        <div class="about-detail">
+          <div class="card_detail-ox">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Baby's Age</th>
+                  <th scope="col">Vaccine</th>
+                  <th scope="col">Vaccination Date</th>
+                </tr>
+              </thead>
+              <tbody id="table-detail">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end about section -->
+
+<script src="js/fetch-data-en.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#birthday').datepicker({
+      format: 'dd/mm/yyyy',
+      sideBySide: false
+    });
+  });
+
+  function changeToVi() {
+    $("#lang").load("/lang/vi.html");
+    document.getElementById("myNav").classList.toggle("menu_width")
+    document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+  }
+</script>

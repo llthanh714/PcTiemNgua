@@ -13,6 +13,14 @@
 }
 
 @media (max-width: 992px) {
+    .slider_detail {
+        padding-top: 60px;
+    }
+
+    .slider_detail h1 {
+        font-size: xx-large;
+    }
+
     .navbar-collapse {
         flex: 0;
     }
@@ -26,6 +34,10 @@
     .slider_detail {
         padding: 25px 15px;
         text-align: center;
+    }
+
+    .slider_detail h1 {
+        font-size: xx-large;
     }
 
     .slider_section .carousel_btn-container {
