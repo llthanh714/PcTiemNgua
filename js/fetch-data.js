@@ -1,5 +1,5 @@
-//var uri = 'http://113.161.210.94:9001/pcportal/api/3rd/vaccination/';
-var uri = 'https://localhost:5001/api/3rd/';
+var uri = 'http://113.161.210.94:9001/pcportal/api/3rd/';
+//var uri = 'https://localhost:5001/api/3rd/';
 
 function getItems() {
     document.getElementById('table-detail').innerHTML = "";

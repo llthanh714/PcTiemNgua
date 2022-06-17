@@ -257,6 +257,7 @@ a:focus {
 }
 
 .slider_detail button {
+  width: 155px;
   outline: none;
   font-weight: bold;
   display: inline-block;
@@ -307,8 +308,6 @@ a:focus {
 /* modal section */
 
 .modal-title{
-  font-size: larger;
-  font-weight: bolder;
   text-align: center;
   color: #ba71a8;
 }
