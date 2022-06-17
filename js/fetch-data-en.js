@@ -49,8 +49,8 @@ function addDetail(item, index, array) {
 function showVcDetail(item, index, array){
     var obj = Object.values(item);
     const title = document.getElementById("modalTitle");
-    title.innerHTML = obj[0];
+    title.innerHTML = obj[2];
     const body = document.getElementById("modalBody");
-    body.innerHTML = obj[1];
+    body.innerHTML = obj[3];
     $("#modal").modal()
 }

@@ -3,8 +3,8 @@
     <header class="header_section">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg custom_nav-container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="./images/logo.png" alt="logo">
+                <a class="navbar-brand" onclick="loadHomePage()">
+                    <img src="/images/logo.png" alt="logo">
                 </a>
                 <div class="navbar-collapse" id="">
                     <div class="custom_menu-btn">
@@ -129,5 +129,10 @@
         $("#lang").load("/lang/en.html");
         document.getElementById("myNav").classList.toggle("menu_width")
         document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    };
+
+    function loadHomePage() {
+        $("#lang").load("/lang/vi.html");
     }
+
 </script>
