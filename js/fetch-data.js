@@ -1,4 +1,4 @@
-var uri = 'http://113.161.210.94:9001/pcportal/api/3rd/';
+var uri = 'https://portal.phuongchau.com:9901/pcportal/api/3rd/';
 //var uri = 'https://localhost:5001/api/3rd/';
 
 function getItems() {
